@@ -7,14 +7,30 @@ export default class CityInformation extends React.Component {
   }
 
   render() {
+    const {
+      city,
+      lon,
+      lat,
+      icon,
+      temp,
+      pressure,
+      humidity,
+      temp_min,
+      temp_max,
+      windspeed,
+    } = this.props;
+
     return (
 
       <div className='col-md-6'>
         <div className="card border-info">
           <div className="card">
-            <div className='card-header'>City Information</div>
+            <div className='card-header' id="header">City Information</div>
             <div className="card-body">
-              <h5 className="card-title text-center">City Image</h5>
+              <h5 className="card-title text-center" id="city-name">
+                 <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} id="weather-icon"/>
+                    {city}</h5>
+                <p className='text-center' id="lat-lon"> Latitude & Longitude: {lat},{lon}</p>
               <hr />
 
               <div className="d-flex bd-highlight mb-3 justify-content-center">
@@ -29,15 +45,16 @@ export default class CityInformation extends React.Component {
                 </div>
               </div>
 
-              <div className="d-flex bd-highlight mb-3 align-items-center">
+
+              <div className="d-flex bd-highlight mb-3 align-items-right" id="temp-values">
                 <div className='p-1 bd-highlight mr-auto'>
-                  <p>Test</p>
+                  <p>{temp}°F</p>
                 </div>
                 <div className='p-1 bd-highlight mr-auto'>
-                  <p>Test</p>
+                  <p>{pressure}</p>
                 </div>
                 <div className='p-1 bd-highlight mr-auto'>
-                  <p>Test</p>
+                  <p>{humidity}%</p>
                 </div>
               </div>
 
@@ -54,15 +71,15 @@ export default class CityInformation extends React.Component {
                 </div>
               </div>
 
-              <div className="d-flex bd-highlight mb-3 align-items-center">
+              <div className="d-flex bd-highlight mb-3 align-items-center" id="temp-values">
                 <div className='p-1 bd-highlight mr-auto'>
-                  <p>Test</p>
+                  <p>{temp_min}°F</p>
                 </div>
                 <div className='p-1 bd-highlight mr-auto'>
-                  <p>Test</p>
+                  <p>{temp_max}°F</p>
                 </div>
                 <div className='p-1 bd-highlight mr-auto'>
-                  <p>Test</p>
+                  <p>{windspeed} mph</p>
                 </div>
               </div>
             </div>

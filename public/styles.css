@@ -1,6 +1,54 @@
 body {
-background: #ECE9E6;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+#header{
+  background-color: lightblue;
 
+}
+#search-input{
+  border-radius: 15px 30px;
+
+}
+
+#search-button{
+
+  display: inline-block;
+  text-decoration: none;
+  background: #87befd;
+  color: #FFF;
+  width: 50px;
+  height:50px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  transition: .4s;
+}
+
+#search-button:hover{
+    background: #668ad8;
+}
+
+#city-name{
+
+font-family: Tahoma, Geneva, sans-serif;
+font-size: 30px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #000000;
+font-weight: 200;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+
+
+#temp-values {
+font-size: 30px;
+color:plum;
+}
+
+#lat-lon{
+font-size: 10px;
 }

@@ -1,3 +1,10 @@
+import { connect } from 'react-redux';
 import SearchHistory from './SearchHistory';
 
-export default SearchHistory;
+function mapStoreToProps(store) {
+  return {
+    history: store.search.history
+  };
+};
+
+export default connect(mapStoreToProps)(SearchHistory);

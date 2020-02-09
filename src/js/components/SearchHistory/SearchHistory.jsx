@@ -1,24 +1,31 @@
 import React from 'react';
 
 
-export default class SearchHistory extends React.Component{
+export default class SearchHistory extends React.Component {
 
-constructor(props){
-  super(props);
-}
+  constructor(props) {
+    super(props);
+  }
 
-render(){
+  render() {
+    const { city, history } = this.props;
 
-  return(
+    return (
       <div className='col-md-6'>
         <div className="card border-info">
-          <h5 className="card-header">Search History</h5>
+          <div className="card-header" id='header'>Search History</div>
           <div className="card-body">
-            <h5 className="card-title">Special title treatment</h5>
-            <p className="card-text"> With supporting text below as a natural lead-in to additional content.</p>
+            <ul className="list-group list-group-flush full-width">
+              {history.map(search => (
+                <li className="list-group-item" key={search.time}>
+                  {search.city}
+                  <p className='text-right'>{search.date}<br />{search.time}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-    </div>
+      </div>
 
     );
   }

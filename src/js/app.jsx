@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import CitySearch from './components/CitySearch';
 import CityInformation from './components/CityInformation';
 import SearchHistory from './components/SearchHistory';
@@ -9,17 +8,6 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
   }
-
-
-  ComponentDidMount() {
-    this.getWeatherdata()
-  }
-
-  getWeatherData() {
-console.log( )
-
-  }
-
 
   render() {
     return (
