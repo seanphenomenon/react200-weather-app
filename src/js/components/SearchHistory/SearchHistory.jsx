@@ -8,7 +8,7 @@ export default class SearchHistory extends React.Component {
   }
 
   render() {
-    const { city, history } = this.props;
+    const { history } = this.props;
 
     return (
       <div className='col-md-6'>
